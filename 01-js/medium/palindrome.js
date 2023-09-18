@@ -7,7 +7,15 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str = str.replaceAll('!','');
+  str = str.replaceAll('?','');
+  str = str.replaceAll(',','');
+  str = str.replaceAll('.','');
+  let str2 = str.toLowerCase().split(" ").join("").split("").join("");;
+ let str1 = str.toLowerCase().split(" ").join("").split("").reverse().join("");
+  return str1==str2;
 }
 
 module.exports = isPalindrome;
+console.log(isPalindrome("Mr. Owl ate my metal worm."));
+
